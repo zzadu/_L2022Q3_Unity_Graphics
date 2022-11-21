@@ -7,7 +7,7 @@ using UnityEngine;
 public class PostEffects_MultiPass : MonoBehaviour
 {
     Shader myShader;        // image effect shader 
-    Material myMaterial;   
+    Material myMaterial;
 
     void Start()
     {
@@ -27,6 +27,7 @@ public class PostEffects_MultiPass : MonoBehaviour
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
         Graphics.Blit(source, destination, myMaterial, 1);  // can choose second pass
+        // 0과 1 중에 패스 선택
     }
 }
 
